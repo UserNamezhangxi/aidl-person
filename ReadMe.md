@@ -38,7 +38,7 @@
 
 那么我们修改它的这些基本的数据类型，在参数里添加`byte aBtye `,`char aChar`,`short aShort ,`编译后发现系统不认识这`short aShort` 所以就不支持这个数据类型了。
 
-####基本数据类型： 
+#### 基本数据类型： 
 
 - byte,
 - char
@@ -49,17 +49,17 @@
 - double
 - String
                     
-####2、List 和 Map
-####3、String ,CharSequence
-####4、Parcelable 的实现实体
+#### 2、List 和 Map
+#### 3、String ,CharSequence
+#### 4、Parcelable 的实现实体
 
 
-###3. AIDL 如何编写
+### 3. AIDL 如何编写
 
 我们通过一个demo来完成，需求：
 客户端可以通过传递两个参数，向服务端发起加法运算，服务端将运算完后的结果返回给客户端，在界面展示。
 
-####setp1 服务端
+#### setp1 服务端
 1.	在java目录下创建一个ADIL的目录
 ![step1](https://i.imgur.com/b2LpP28.png)
 
@@ -251,7 +251,7 @@ OK，服务端到此为止。
 		
 		parcelable Person;  //自定义定义数据类型
 
-	####需要注意的是:
+	#### 需要注意的是:
 	- 非基本类型的数据需要导入，比如上面的 Person，需要导入它的全路径。
 		- 这里的 Person 我理解的是 Person.aidl，然后通过 Person.aidl 又找到真正的实体 Person 类。 
 	- 方法参数中，除了基本数据类型，其他类型的参数都需要标上方向类型 
@@ -383,7 +383,7 @@ OK，服务端到此为止。
             android:name=".IRemoteService"
             android:exported="true"
             android:process=":remote"/>
-####服务端告一段落。接下来开发客户端
+#### 服务端告一段落。接下来开发客户端
 6. 新建一个Module `client`
 
 	![](https://i.imgur.com/IFzfMe6.png)
@@ -460,4 +460,4 @@ OK，服务端到此为止。
 
 	![最终效果](https://i.imgur.com/kCAkbAT.gif)
 
-	###[慕课网参考](https://www.imooc.com/learn/606 "慕课网参考")
+	### [慕课网参考](https://www.imooc.com/learn/606 "慕课网参考")
